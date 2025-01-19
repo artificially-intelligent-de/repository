@@ -1,0 +1,11 @@
+.gitconfig
+.git
+venv
+*.pdf
+.DS_Store
+.Python
+lib
+.idea
+pyvenv.cfg
+bin
+README.md
