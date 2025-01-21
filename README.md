@@ -3,7 +3,7 @@
 ### UserLoginConsumer
 - Consumes the provided `user-login` topic. 
 - Generates metrics as described [below](#list-of-metrics-generated), on to a `metric-event` topic.
-- Puts invalid (received) messages on to a `metric-event-dlq` (Dead Letter Queue) topic.
+- Puts invalid (received) messages on to a `dead-letter-queue` topic.
 
 ### `printer.py`
 - Prints messages for a provided topic.
@@ -123,7 +123,7 @@ Message from the `metric-event` topic, as produced by the consumer introduced.
 ```
 
 ### Error schema
-Message from the `metric-event-dlq` topic, as produced by the consumer introduced.
+Message from the `dead-letter-queue` topic, as produced by the consumer introduced.
 ```json
 {
   "topic_name": "user-login",
@@ -151,7 +151,7 @@ Currently, the Kafka cluster consists of a single broker. Introducing multiple b
 Once there are multiple brokers, increasing `replication-factor` (to more than one) would lead to better resiliency against broker failures.
 
 ### Batching messages 
-Currently, the `MetricsProducer` producer produces (and flushes) one message at a time, for both, `metric-event` and `metric-event-dlq` topic. Depending on the volume, it may make sense to batch-produce these, instead. 
+Currently, the `MetricsProducer` producer produces (and flushes) one message at a time, for both, `metric-event` and `dead-letter-queue` topic. Depending on the volume, it may make sense to batch-produce these, instead. 
 
 # Production deployment guidelines
 In general, using infrastructure as code tool like Terraform for infrastructure provisioning and maintenance is ideal. \

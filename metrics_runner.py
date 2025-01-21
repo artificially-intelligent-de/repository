@@ -7,7 +7,7 @@ from producers.metrics import MetricsProducer
 KAFKA_SERVERS = ['localhost:29092']
 INPUT_TOPIC = 'user-login'
 METRICS_TOPIC = 'metric-event'
-DLQ_TOPIC = 'metric-event-dlq'
+DLQ_TOPIC = 'dead-letter-queue'
 WINDOW_SIZE = 300
 
 

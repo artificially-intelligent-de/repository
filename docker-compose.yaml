@@ -28,7 +28,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_CREATE_TOPICS: 'metric-event,metric-event-dlq'
+      KAFKA_CREATE_TOPICS: 'metric-event,dead-letter-queue'
   my-python-producer:
     image: mpradeep954/fetch-de-data-gen
     depends_on:
