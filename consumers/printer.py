@@ -1,6 +1,10 @@
 import argparse
 from kafka import KafkaConsumer
 
+"""
+A basic Kafka consumer that just prints messages.
+"""
+
 
 def consume_messages(topic, bootstrap_servers):
     try:
