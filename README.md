@@ -56,7 +56,7 @@ python printer.py --topic <topic-name>
 
 # Message Schemas
 ### Input schema
-Message from the `user-login`topic, as produced by the provided data generator
+Message from the `user-login` topic, as produced by the provided data generator.
 ```json
 {
   "user_id": "ac853026-90a7-4c4d-9aad-98fc851f97a7",
@@ -70,7 +70,7 @@ Message from the `user-login`topic, as produced by the provided data generator
 ```
 
 ### Output schema
-Message from the `metric-event` topic, as produced by the consumer introduced 
+Message from the `metric-event` topic, as produced by the consumer introduced. 
 ```json
 {
   "timestamp": "2025-01-21T00:02:06.015516", 
@@ -123,7 +123,7 @@ Message from the `metric-event` topic, as produced by the consumer introduced
 ```
 
 ### Error schema
-Message from the `metric-event-dlq` topic, as produced by the consumer introduced
+Message from the `metric-event-dlq` topic, as produced by the consumer introduced.
 ```json
 {
   "topic_name": "user-login",

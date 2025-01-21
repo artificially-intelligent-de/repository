@@ -8,7 +8,7 @@ KAFKA_SERVERS = ['localhost:29092']
 INPUT_TOPIC = 'user-login'
 METRICS_TOPIC = 'metric-event'
 DLQ_TOPIC = 'metric-event-dlq'
-WINDOW_SIZE = 60
+WINDOW_SIZE = 300
 
 
 def main():
